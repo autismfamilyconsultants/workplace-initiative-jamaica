@@ -1,0 +1,5 @@
+qa/
+.env*
+dist/
+node_modules/
+supabase/.temp/
