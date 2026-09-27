@@ -2,6 +2,12 @@
 
 final result: passed
 
+## Typography refinement
+- Adapted the supplied oomh reference with joined rectangular hero panels, thin dividers and uppercase Space Grotesk headings. Inter is used for body copy; original logo colors and content remain unchanged.
+- Verified loaded font faces in the browser, not just CSS declarations.
+- Screenshots: `qa/type-desktop.png` (1440 × 1000), `qa/type-mobile.png` (390 × 844), `qa/type-tablet.png` (768 × 1024). No horizontal overflow or browser errors. Image zoom respects reduced-motion preferences.
+- This iteration supersedes the earlier Manrope typography noted below.
+
 ## Source and scope
 - Primary visual reference: user attachment `codex-clipboard-be62d3f7-c553-4cf1-ba12-29161dda01f0.png` (1000 × 1723), supported by supplied bento-layout references.
 - Brand truth: supplied `podwash jamaica without bg.svg`; colors #107128, #FAC32A, #020202. Only its viewBox was tightened to remove empty space; paths retained.
