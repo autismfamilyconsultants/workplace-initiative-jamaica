@@ -1,6 +1,7 @@
 # PodWash Jamaica — continuation context
 
 ## Latest update (supersedes older icon notes below)
+- 2026-09-28: Header has two desktop tiers: centered supplied SVG logo, then full labels Corporate Partnerships / Become a PodPro / Bring PodWash to Your Area / About / Contact. Home removed from navigation; logo retains /#home. Shared navigation labels also apply to footer. Mobile <=900px uses logo + Menu with full wrapping labels. Styles at end of static/brand.css; sticky header retained. Anchor offsets now use scroll-padding only (160px desktop / 100px mobile), removing additive section offsets. Build and visual verification precede main push; resolve final commit with git log -1.
 - Current fix: static/site.css overrides focus for text-like inputs, select and textarea using a 2px green outline inset by 2px, green border and no box shadow. This removes the global 5px outline gap without hiding keyboard focus. Radio/checkbox and button focus are unchanged. Applies to admin access key, inline contact and modal questionnaires. Previous production commit b4eb00b; resolve new release SHA via git log -1.
 - User requested text-only buttons. Removed decorative icons from the shared button helper and CTA text links in scripts/landing.mjs. Labels, targets, popup handlers and forms are unchanged.
 - Informational icons, select chevrons and popup close icon remain. Prior release 9edc160 is deployed; this update is being committed and pushed through the same main-branch workflow. Use git log -1 for the resulting commit.
