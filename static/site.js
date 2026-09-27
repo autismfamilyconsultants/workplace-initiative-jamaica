@@ -1,5 +1,23 @@
 import {forms,visible,validate} from '/schema.mjs';
 const el=(tag,attrs={},text)=>{const n=document.createElement(tag);for(const[k,v]of Object.entries(attrs))n.setAttribute(k,v);if(text!==undefined)n.textContent=text;return n;};
+// Native dialogs keep the questionnaires on the landing page, with focus trapping.
+if(document.querySelector('#home')){
+ for(const type of ['corporate','podpro','area']){
+  const spec=forms[type],dialog=el('dialog',{class:'inquiry-dialog',id:`inquiry-${type}`,'aria-labelledby':`inquiry-title-${type}`});
+  const panel=el('div',{class:'inquiry-panel'}),close=el('button',{type:'button',class:'inquiry-close','aria-label':'Close form'},'×');
+  panel.append(close,el('h2',{id:`inquiry-title-${type}`,tabindex:'-1'},spec.title),el('p',{},spec.intro),el('p',{class:'small-note'},'Fields marked * are required. All other fields are optional.'),el('div',{'data-form':type}));
+  dialog.append(panel);document.body.append(dialog);
+  close.addEventListener('click',()=>dialog.close());
+  dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
+  dialog.addEventListener('close',()=>{document.body.classList.remove('inquiry-open');dialog.opener?.focus();});
+ }
+ document.addEventListener('click',e=>{
+  const link=e.target.closest('a');if(!link||e.defaultPrevented||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey||e.button!==0)return;
+  const url=new URL(link.href,location.href),match=url.pathname.match(/^\/forms\/(corporate|podpro|area)\/?$/);
+  if(url.origin!==location.origin||!match)return;
+  e.preventDefault();const dialog=document.querySelector(`#inquiry-${match[1]}`);dialog.opener=link;dialog.showModal();dialog.scrollTop=0;document.body.classList.add('inquiry-open');dialog.querySelector('h2').focus();
+ });
+}
 document.querySelectorAll('.mobile-nav a').forEach(a=>a.addEventListener('click',()=>a.closest('details').open=false));
 document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.mobile-nav[open]').forEach(n=>{n.open=false;n.querySelector('summary').focus();});});
 const observer=new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting)document.querySelectorAll('.desktop-nav a').forEach(a=>{const active=a.hash===`#${e.target.id}`;a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});},{rootMargin:'-15% 0px -65% 0px'});
@@ -37,7 +55,7 @@ for(const host of document.querySelectorAll('[data-form]')){
  };form.addEventListener('input',update);form.addEventListener('change',update);update();
  form.addEventListener('submit',async e=>{e.preventDefault();const data=collect(),checked=validate(type,data);if(checked.error){status.textContent=checked.error;groups.get(checked.field)?.wrap.querySelector('input,select,textarea')?.focus();return;}
   submit.disabled=true;submit.textContent='Sending…';status.textContent='';
-  try{const result=await request('submit',{type,data:checked.data,id,website:data.website||'',started});if(!result.ok)throw Error('Please try again.');const success=el('div',{class:'success',tabindex:'-1'});success.append(el('span',{class:'success-icon','aria-hidden':'true'},'✓'),el('h2',{},'Thank you.'),el('p',{},spec.confirmation),el('a',{href:'/',class:'button'},'Return to PodWash Jamaica'));host.replaceChildren(success);success.focus();}
+  try{const result=await request('submit',{type,data:checked.data,id,website:data.website||'',started});if(!result.ok)throw Error('Please try again.');const success=el('div',{class:'success',tabindex:'-1'}),dialog=host.closest('dialog');const done=dialog?el('button',{type:'button',class:'button'},'Done'):el('a',{href:'/',class:'button'},'Return to PodWash Jamaica');if(dialog)done.addEventListener('click',()=>dialog.close());success.append(el('span',{class:'success-icon','aria-hidden':'true'},'✓'),el('h2',{},'Thank you.'),el('p',{},spec.confirmation),done);host.replaceChildren(success);success.focus();}
   catch(error){status.textContent=error.message;submit.disabled=false;submit.textContent=spec.button;}
  });
 }

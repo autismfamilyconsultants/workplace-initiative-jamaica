@@ -24,4 +24,8 @@ for(const match of html.matchAll(/(?:src|href)="(\/[^"#]+\.(?:css|js|svg|webp))"
 const css=fs.readFileSync('static/brand.css','utf8');
 for(const color of ['#107128','#fac32a','#020202'])assert.ok(css.includes(color));
 assert.ok(!html.includes('A cleaner car.'));
-console.log('Six sections, detailed content, CTA routes, separate forms, brand assets and colors passed.');
+const client=fs.readFileSync('static/site.js','utf8');
+assert.ok(client.includes("el('dialog'"));
+assert.ok(client.includes('dialog.showModal()'));
+assert.ok(client.includes('dialog.opener?.focus()'));
+console.log('Six sections, modal form wiring, fallback routes, brand assets and colors passed.');

@@ -1,4 +1,12 @@
 /* Brand colors sampled directly from the supplied PodWash SVG. */
+body.inquiry-open{overflow:hidden}
+.inquiry-dialog{width:min(760px,calc(100% - 32px));max-height:calc(100dvh - 40px);padding:0;border:1px solid #dfe5dc;border-radius:12px;color:#020202;background:#fff;overscroll-behavior:contain}
+.inquiry-dialog::backdrop{background:rgba(2,2,2,.6)}
+.inquiry-panel{padding:36px;position:relative}
+.inquiry-panel>h2{padding-right:38px;font-size:32px}
+.inquiry-panel>h2:focus{outline:none}
+.inquiry-close{position:sticky;top:0;float:right;margin:-16px -16px 0 0;width:44px;height:44px;border:1px solid #dfe5dc;border-radius:50%;background:#fff;color:#020202;font-size:28px;cursor:pointer;z-index:1}
+@media(max-width:650px){.inquiry-panel{padding:24px 18px}.inquiry-panel>h2{font-size:27px}.inquiry-close{margin:-10px -4px 0 0}.inquiry-dialog{max-height:calc(100dvh - 24px)}}
 :root{--ink:#020202;--green:#107128;--yellow:#fac32a;--paper:#fff;--sage:#f1f5f0;--line:#dfe5dc;--muted:#586158;--deep:#103b21}
 body{font-family:Inter,Arial,sans-serif;font-size:15px;line-height:1.7;background:#fff}
 h1,h2,h3,h4{font-family:'Outfit',Arial,sans-serif;font-style:normal;font-weight:500;letter-spacing:-.045em;color:var(--ink)}
