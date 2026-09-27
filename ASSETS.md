@@ -5,4 +5,4 @@
 - `static/team-work.webp`: generated with built-in ImageGen, then encoded as WebP. Prompt: photorealistic Jamaican workplace scene, adult Caribbean woman supervisor reviewing a clipboard with two adult coworkers in green polos beside a silver vehicle; natural daylight, credible B2B atmosphere, no logos/readable text or charity cues; green/gold palette.
 - Both photographs are illustrative brand scenes, not photographs of actual PodWash staff or facilities. Captions make this clear.
 - UI icons: Bootstrap Icons 1.13.1, MIT licensed, locally served from the npm package. https://icons.getbootstrap.com/
-- Typefaces: Inter for body copy and Space Grotesk for headings, via Google Fonts.
+- Typefaces: Inter for body copy and Outfit for headings, via Google Fonts.

@@ -1,7 +1,7 @@
 /* Brand colors sampled directly from the supplied PodWash SVG. */
 :root{--ink:#020202;--green:#107128;--yellow:#fac32a;--paper:#fff;--sage:#f1f5f0;--line:#dfe5dc;--muted:#586158;--deep:#103b21}
 body{font-family:Inter,Arial,sans-serif;font-size:15px;line-height:1.7;background:#fff}
-h1,h2,h3,h4{font-family:'Space Grotesk',Arial,sans-serif;font-style:normal;font-weight:500;letter-spacing:-.045em;color:var(--ink)}
+h1,h2,h3,h4{font-family:'Outfit',Arial,sans-serif;font-style:normal;font-weight:500;letter-spacing:-.045em;color:var(--ink)}
 h1{font-size:clamp(44px,4.8vw,70px);line-height:1.06;margin-bottom:25px;font-weight:800}
 h2{font-size:clamp(34px,3.4vw,48px);line-height:1.14;margin-bottom:22px}
 h3{font-size:23px;line-height:1.3;letter-spacing:-.035em}
@@ -19,22 +19,22 @@ footer{background:var(--ink)}.footer-logo{width:210px;border-radius:8px;padding:
 @media(max-width:650px){.shell{width:calc(100% - 32px)}.nav-shell{width:calc(100% - 32px);min-height:76px}.logo{width:163px}.logo img{height:auto}.brand-line{align-items:start;gap:20px;font-size:8px;line-height:1.6}.brand-line>span:last-child{max-width:175px;text-align:right}.brand-line b{padding:0 3px}.hero{padding-top:20px}.hero-bento,.hero-summary,.service-layout,.team-panel,.impact-line,.podpro-top,.work-pair,.takeaway,.location-panel,.about-grid,.about-details,.ecowash,.closing-grid{grid-template-columns:1fr}.hero-copy{padding:30px 25px}.hero h1{font-size:46px}.hero-copy .actions{flex-direction:row}.hero-copy .button{font-size:10px;padding:13px 14px}.hero-photo{min-height:0;height:360px}.hero-photo img{object-position:50% 45%}.photo-caption{padding:16px 22px;font-size:15px}.hero-photo figcaption{bottom:84px}.hero-summary{padding-top:36px;gap:22px}.hero-summary h2{font-size:28px}.water-strip{grid-template-columns:1fr;padding:27px;gap:20px}.water-strip>.text-link{grid-column:auto}.water-number strong{font-size:50px}.section{padding:48px 0}.section-heading{margin-bottom:26px}.sector-list{grid-template-columns:1fr 1fr;gap:16px}.sector-panel{padding:25px}.subheading{display:block;margin-top:38px}.subheading>span,.subheading>p{display:block;margin-top:12px}.benefit-grid{grid-template-columns:1fr 1fr}.benefit-grid article{padding:22px 17px}.benefit-grid h3{font-size:16px}.benefit-grid p{font-size:12px}.team-panel{margin-top:35px;gap:25px}.team-panel .photo{height:300px}.team-panel h3{font-size:28px}.impact-line{gap:20px;padding:27px 0}.impact-line h3{font-size:27px}.process-grid{gap:25px 20px}.process>h3{font-size:28px}.process-grid h4{font-size:16px}.process-bottom{display:grid;gap:20px}.podpro-top .photo{height:320px}.podpro-top{gap:28px}.work-pair{margin-top:28px}.work-pair article{padding:25px}.skills-grid{gap:12px 20px}.skills-grid h4{font-size:15px}.takeaway{gap:20px}.location-panel{padding:30px;gap:30px}.location-aside{border-left:0;border-top:1px solid #41604a;padding:25px 0 0}.location-aside>.bi{font-size:32px;margin-bottom:18px}.location-aside h3{font-size:26px}.about-grid,.about-details{gap:24px}.about-details{margin-top:20px}.ecowash{gap:22px;padding:25px}.ecowash>.text-link{grid-column:auto}.contact-grid .form-card{padding:25px 18px}.closing{margin-top:45px;padding-top:35px}.closing>h2{font-size:34px}.closing-grid article{padding:25px}.form-layout h1{font-size:36px}.footer-grid{gap:30px}.footer-logo{width:185px}.footer-grid .eyebrow{margin-bottom:14px}}
 @media(prefers-reduced-motion:reduce){.button{transition:none}.button:hover{transform:none}}
 /* Editorial typography and joined panels, inspired by the supplied oomh reference. */
-.desktop-nav a{font-family:'Space Grotesk',Arial,sans-serif;font-size:16px;letter-spacing:-.025em;max-width:none;white-space:nowrap}
-.mobile-nav summary,.mobile-nav a{font-family:'Space Grotesk',Arial,sans-serif;font-size:16px}
+.desktop-nav a{font-family:'Outfit',Arial,sans-serif;font-size:16px;letter-spacing:-.025em;max-width:none;white-space:nowrap}
+.mobile-nav summary,.mobile-nav a{font-family:'Outfit',Arial,sans-serif;font-size:16px}
 .hero-copy .button{font-size:13px}
 .signature{font-family:Inter,Arial,sans-serif}
-.success h2{font-family:'Space Grotesk',Arial,sans-serif}
+.success h2{font-family:'Outfit',Arial,sans-serif}
 .hero-bento{gap:0;border:1px solid var(--line)}
 .hero-copy{border-radius:0;background:#f5f6f2;padding:42px 34px}
 .hero-visual,.hero-photo{border-radius:0}
 .hero-visual{border-left:1px solid var(--line)}
-.hero h1{font-size:clamp(42px,4.7vw,67px);font-weight:500;text-transform:uppercase;line-height:1.04;letter-spacing:-.065em}
+.hero h1{font-size:clamp(42px,4.7vw,67px);font-weight:500;text-transform:uppercase;line-height:1.04;letter-spacing:-.035em}
 .hero-copy>p:not(.eyebrow){font-size:14px;line-height:1.7}
 .hero-copy .actions{gap:12px}
 .hero-summary h2{font-weight:500}
-.photo-caption{background:var(--green);font-family:'Space Grotesk',Arial,sans-serif;font-weight:500}
+.photo-caption{background:var(--green);font-family:'Outfit',Arial,sans-serif;font-weight:500}
 .water-strip,.location-panel{border-radius:0}
-.water-number strong,.step-number{font-family:'Space Grotesk',Arial,sans-serif;font-weight:400}
+.water-number strong,.step-number{font-family:'Outfit',Arial,sans-serif;font-weight:400}
 .water-number strong{letter-spacing:-.065em}
 .sector-panel,.benefit-grid,.work-pair article,.ecowash,.closing-grid article{border-radius:4px}
 .benefit-grid h3,.skills-grid h4,.process-grid h4{font-weight:600}
@@ -45,5 +45,5 @@ footer{background:var(--ink)}.footer-logo{width:210px;border-radius:8px;padding:
 @media(hover:hover){.photo:hover img{transform:scale(1.025)}}
 @media(max-width:1150px){.hero h1{font-size:clamp(42px,4.6vw,56px)}.hero-copy{padding:34px 26px}}
 @media(max-width:900px){.hero h1{font-size:42px}.hero-copy{padding:32px 24px}}
-@media(max-width:650px){.hero h1{font-size:clamp(35px,9.8vw,48px);letter-spacing:-.06em}.hero-copy{padding:30px 24px}.hero-visual{border-left:0;border-top:1px solid var(--line)}.hero-copy .actions{flex-direction:row}.hero-copy .button{font-size:11px}.hero-summary h2{font-size:27px}}
+@media(max-width:650px){.hero h1{font-size:clamp(35px,9.8vw,48px);letter-spacing:-.035em}.hero-copy{padding:30px 24px}.hero-visual{border-left:0;border-top:1px solid var(--line)}.hero-copy .actions{flex-direction:row}.hero-copy .button{font-size:11px}.hero-summary h2{font-size:27px}}
 @media(prefers-reduced-motion:reduce){.photo img{transition:none}.photo:hover img{transform:none}}
