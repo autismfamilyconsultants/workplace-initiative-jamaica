@@ -2,14 +2,16 @@ import assert from 'node:assert/strict';
 import {forms,visible,validate} from '../supabase/functions/podwash-forms/schema.mjs';
 const fixtures={
  corporate:{name:'[TEST] PodWash corporate launch QA',jobTitle:'QA',organization:'Deployment check — no action needed',email:'podwash-qa@example.com',phone:'+1 876 555 0100',parish:'Kingston',organizationType:'Private business',vehicles:'12',frequency:'Weekly',vehicleType:'Company/Fleet Vehicles',onSite:'Yes',start:'Exploring options'},
- podpro:{name:'[TEST] PodWash PodPro launch QA',email:'podwash-qa@example.com',phone:'+1 876 555 0100',age:'17',parish:'Kingston',guardianName:'Synthetic guardian',guardianContact:'guardian@example.com',current:'In School',experience:'Yes',experienceDetails:'Synthetic volunteer experience.',interest:'Synthetic QA inquiry. No action needed.',learning:'Teamwork.',availability:'Weekends',transport:'Yes'},
+ podpro:{name:'[TEST] PodWash PodPro launch QA',email:'podwash-qa@example.com',phone:'+1 876 555 0100',age:'17',parish:'Kingston',guardianContact:'Synthetic guardian — guardian@example.com',current:'In School',experience:'Yes',experienceDetails:'Synthetic volunteer experience.',interest:'Synthetic QA inquiry. No action needed.',learning:'Teamwork.',availability:'Weekends',transport:'Yes'},
  area:{name:'[TEST] PodWash location launch QA',email:'podwash-qa@example.com',phone:'+1 876 555 0100',country:'Jamaica',region:'Kingston',city:'Kingston',role:'Community Member',reason:'Synthetic QA inquiry. No action needed.',partner:'Yes',partnerDetails:'Synthetic partner for launch QA.'},
  contact:{name:'[TEST] PodWash contact launch QA',email:'podwash-qa@example.com',phone:'+1 876 555 0100',interest:'General Information',message:'Synthetic launch test of PodWash forms, storage and notification. No action needed.'}
 };
 for(const [type,data] of Object.entries(fixtures)){assert.ok(validate(type,data).data,type);assert.ok(validate(type,{...data,email:'invalid'}).error);assert.ok(validate(type,{...data,name:''}).error);}
-assert.ok(validate('podpro',{...fixtures.podpro,guardianName:''}).error);
+assert.ok(validate('podpro',{...fixtures.podpro,guardianContact:''}).error);
 const adult=validate('podpro',{...fixtures.podpro,age:'18',experience:'No'}).data;
-assert.equal(adult.guardianName,undefined);assert.equal(adult.experienceDetails,undefined);
+assert.equal(adult.guardianContact,undefined);assert.equal(adult.experienceDetails,undefined);
+assert.ok(validate('podpro',{...fixtures.podpro,age:'15'}).error);
+assert.ok(validate('podpro',{...fixtures.podpro,age:'26'}).error);
 assert.ok(validate('corporate',{...fixtures.corporate,vehicles:'-1'}).error);
 assert.ok(validate('corporate',{...fixtures.corporate,frequency:'Other'}).error);
 assert.equal(validate('area',{...fixtures.area,partner:'No'}).data.partnerDetails,undefined);
