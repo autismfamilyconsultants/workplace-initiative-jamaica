@@ -36,7 +36,7 @@ footer{background:var(--ink)}.footer-logo{width:210px;border-radius:8px;padding:
 .water-strip,.location-panel{border-radius:0}
 .water-number strong,.step-number{font-family:'Outfit',Arial,sans-serif;font-weight:400}
 .water-number strong{letter-spacing:-.065em}
-.water-number strong span{margin-inline-start:8px;letter-spacing:0}
+.water-number strong span{margin-inline-start:4px;letter-spacing:0}
 .sector-panel,.benefit-grid,.work-pair article,.ecowash,.closing-grid article{border-radius:4px}
 .benefit-grid h3,.skills-grid h4,.process-grid h4{font-weight:600}
 .photo:not(.hero-photo){border-radius:4px}
