@@ -41,6 +41,7 @@ footer{background:var(--ink)}.footer-logo{width:210px;border-radius:8px;padding:
 .photo:not(.hero-photo){border-radius:4px}
 .button{font-weight:600;border-radius:5px}
 .desktop-nav a{font-weight:500}
+.header .desktop-nav a,.header .desktop-nav a:is(:hover,:focus-visible,.active),.header .mobile-nav a,.header .mobile-nav a:is(:hover,:focus-visible,.active){color:var(--ink)}
 .photo img{transition:transform .6s ease}
 @media(hover:hover){.photo:hover img{transform:scale(1.025)}}
 @media(max-width:1150px){.hero h1{font-size:clamp(42px,4.6vw,56px)}.hero-copy{padding:34px 26px}}
