@@ -41,7 +41,7 @@ for(const host of document.querySelectorAll('[data-form]')){
   if(f.type==='radio'){
    const choices=el('div',{class:'radios'});f.options.forEach((value,i)=>{const choice=el('label',{class:'choice'});choice.append(el('input',{...attrs,id:`${type}-${f.id}-${i}`,type:'radio',value}),el('span',{},value));choices.append(choice);});wrap.append(choices);
   }else if(f.type==='select'){
-   const select=el('select',attrs);select.append(el('option',{value:''},'Select an option'));f.options.forEach(v=>select.append(el('option',{value:v},v)));wrap.append(select);
+   const select=el('select',attrs);select.append(el('option',{value:''},'Select an option'));f.options.forEach(v=>select.append(el('option',{value:v},v)));const control=el('div',{class:'select-control'});control.append(select,el('i',{class:'bi bi-chevron-down','aria-hidden':'true'}));wrap.append(control);
   }else if(f.type==='textarea')wrap.append(el('textarea',{...attrs,rows:'4',maxlength:'4000'}));
   else wrap.append(el('input',{...attrs,type:f.type,...(f.type==='number'?{min:String(f.min),max:String(f.max),step:f.id==='budget'?'0.01':'1'}:{maxlength:String(f.max||300)})}));
   groups.set(f.id,{wrap,field:f});fields.append(wrap);
