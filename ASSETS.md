@@ -1,5 +1,7 @@
 # PodWash visual assets
 
+- `static/favicon.png`: user-supplied green/gold drop mark from `C:/Users/misha/OneDrive/Рабочий стол/favicon.png`, copied unchanged; shared favicon for all pages.
+
 - `static/podpro-training.webp`: generated 2026-09-28 using built-in ImageGen; WebP encoding quality 88. Prompt: photorealistic editorial photograph for “Build skills. Gain experience. Get paid.”; two clearly adult Jamaican trainees in forest-green polos and charcoal trousers learning low-water silver-car detailing from an experienced Jamaican woman supervisor, gold microfiber cloth, contemporary Jamaican office campus with tropical foliage, natural daylight, capable coworkers, central 3:2 composition with crop safety, no text/logos/watermarks/hose/foam. Fictional illustrative scene; caption retained.
 
 - `static/podwash-logo.svg`: supplied by the user; original path geometry and colors preserved, viewBox tightened for navigation use.
