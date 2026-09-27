@@ -1,6 +1,7 @@
 # PodWash Jamaica — continuation context
 
 ## Latest update (supersedes older icon notes below)
+- Current fix: static/site.css overrides focus for text-like inputs, select and textarea using a 2px green outline inset by 2px, green border and no box shadow. This removes the global 5px outline gap without hiding keyboard focus. Radio/checkbox and button focus are unchanged. Applies to admin access key, inline contact and modal questionnaires. Previous production commit b4eb00b; resolve new release SHA via git log -1.
 - User requested text-only buttons. Removed decorative icons from the shared button helper and CTA text links in scripts/landing.mjs. Labels, targets, popup handlers and forms are unchanged.
 - Informational icons, select chevrons and popup close icon remain. Prior release 9edc160 is deployed; this update is being committed and pushed through the same main-branch workflow. Use git log -1 for the resulting commit.
 

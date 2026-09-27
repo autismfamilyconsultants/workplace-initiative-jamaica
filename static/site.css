@@ -5,6 +5,7 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button:hover{transform:none}}
 .logo img,.footer-logo img{object-fit:cover;object-position:center 52%}
 .select-control{position:relative;width:100%}
+input:not([type=radio]):not([type=checkbox]):focus,select:focus,textarea:focus{outline:2px solid var(--green);outline-offset:-2px;border-color:var(--green);box-shadow:none}
 .inquiry-close{display:grid;place-items:center;padding:0;line-height:1}
 .inquiry-close .bi{display:block;font-size:20px;line-height:1}
 .field label.choice{display:flex;align-items:center;gap:8px;margin:0;line-height:1.4}
