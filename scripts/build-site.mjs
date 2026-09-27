@@ -8,7 +8,7 @@ fs.cpSync('node_modules/bootstrap-icons/font',`${out}/icons`,{recursive:true});
 fs.copyFileSync('supabase/functions/podwash-forms/schema.mjs',`${out}/schema.mjs`);
 const config={url:process.env.NEXT_PUBLIC_SUPABASE_URL||'https://aabqjokzpjadmpdoyhfe.supabase.co',anonKey:process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY||''};
 fs.writeFileSync(`${out}/config.js`,`window.PODWASH_CONFIG=${JSON.stringify(config)};`);
-const nav=[['home','Home'],['corporate','Corporate Partnerships'],['podpro','Become a PodPro'],['area','Bring PodWash to Your Area'],['about','About'],['contact','Contact']];
+const nav=[['home','Home'],['corporate','Partnerships'],['podpro','Become a PodPro'],['area','Locations'],['about','About'],['contact','Contact']];
 const links=nav.map(([id,label])=>`<a href="/#${id}">${label}</a>`).join('');
 const logo='<img src="/podwash-logo.svg" alt="PodWash Jamaica — powered by EcoWash Global" width="184" height="58">';
 const header=`<a class="skip" href="#main">Skip to content</a><header class="header"><div class="nav-shell"><a class="logo" href="/#home" aria-label="PodWash Jamaica home">${logo}</a><nav class="desktop-nav" aria-label="Main navigation">${links}</nav><details class="mobile-nav"><summary>Menu ${icon('list')}</summary><nav aria-label="Mobile navigation">${links}</nav></details></div></header>`;
