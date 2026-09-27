@@ -1,5 +1,9 @@
 # PodWash Jamaica — continuation context
 
+## Latest update (supersedes older icon notes below)
+- User requested text-only buttons. Removed decorative icons from the shared button helper and CTA text links in scripts/landing.mjs. Labels, targets, popup handlers and forms are unchanged.
+- Informational icons, select chevrons and popup close icon remain. Prior release 9edc160 is deployed; this update is being committed and pushed through the same main-branch workflow. Use git log -1 for the resulting commit.
+
 ## Repository and deployment
 - Local repository: C:/Users/misha/Documents/Codex/2026-08-31/x20/outputs/podwash-jamaica
 - GitHub: autismfamilyconsultants/workplace-initiative-jamaica, branch main.
