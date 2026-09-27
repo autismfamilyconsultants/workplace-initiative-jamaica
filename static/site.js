@@ -4,7 +4,7 @@ const el=(tag,attrs={},text)=>{const n=document.createElement(tag);for(const[k,v
 if(document.querySelector('#home')){
  for(const type of ['corporate','podpro','area']){
   const spec=forms[type],dialog=el('dialog',{class:'inquiry-dialog',id:`inquiry-${type}`,'aria-labelledby':`inquiry-title-${type}`});
-  const panel=el('div',{class:'inquiry-panel'}),close=el('button',{type:'button',class:'inquiry-close','aria-label':'Close form'},'×');
+  const panel=el('div',{class:'inquiry-panel'}),close=el('button',{type:'button',class:'inquiry-close','aria-label':'Close form'});close.append(el('i',{class:'bi bi-x-lg','aria-hidden':'true'}));
   panel.append(close,el('h2',{id:`inquiry-title-${type}`,tabindex:'-1'},spec.title),el('p',{},spec.intro),el('p',{class:'small-note'},'Fields marked * are required. All other fields are optional.'),el('div',{'data-form':type}));
   dialog.append(panel);document.body.append(dialog);
   close.addEventListener('click',()=>dialog.close());
