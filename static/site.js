@@ -54,8 +54,15 @@ for(const host of document.querySelectorAll('[data-form]')){
   if(type==='contact'){const routes={'Corporate Partnerships':['corporate','corporate partnership inquiry'],'Becoming a PodPro':['podpro','PodPro interest form'],'Bringing PodWash to My Area':['area','location suggestion form']};const route=routes[data.interest];suggestion.hidden=!route;if(route){suggestion.replaceChildren(document.createTextNode('Ready to share more details? Use the '),el('a',{href:`/forms/${route[0]}`},route[1]),document.createTextNode(', or send a general question below.'));}}
  };form.addEventListener('input',update);form.addEventListener('change',update);update();
  form.addEventListener('submit',async e=>{e.preventDefault();const data=collect(),checked=validate(type,data);if(checked.error){status.textContent=checked.error;groups.get(checked.field)?.wrap.querySelector('input,select,textarea')?.focus();return;}
+  const submissionData={...checked.data};
+  // Backward-compatible bridge for the currently deployed PodWash form function.
+  // The approved requirements use one combined guardian field, while the previous
+  // API schema expected separate guardianName + guardianContact values.
+  if(type==='podpro'&&submissionData.guardianContact&&Number(submissionData.age)<18){
+    submissionData.guardianName=submissionData.guardianContact;
+  }
   submit.disabled=true;submit.textContent='Sending…';status.textContent='';
-  try{const result=await request('submit',{type,data:checked.data,id,website:data.website||'',started});if(!result.ok)throw Error('Please try again.');const success=el('div',{class:'success',tabindex:'-1'}),dialog=host.closest('dialog');const done=dialog?el('button',{type:'button',class:'button'},'Done'):el('a',{href:'/',class:'button'},'Return to PodWash Jamaica');if(dialog)done.addEventListener('click',()=>dialog.close());success.append(el('span',{class:'success-icon','aria-hidden':'true'},'✓'),el('h2',{},'Thank you.'),el('p',{},spec.confirmation),done);host.replaceChildren(success);success.focus();}
+  try{const result=await request('submit',{type,data:submissionData,id,website:data.website||'',started});if(!result.ok)throw Error('Please try again.');const success=el('div',{class:'success',tabindex:'-1'}),dialog=host.closest('dialog');const done=dialog?el('button',{type:'button',class:'button'},'Done'):el('a',{href:'/',class:'button'},'Return to PodWash Jamaica');if(dialog)done.addEventListener('click',()=>dialog.close());success.append(el('span',{class:'success-icon','aria-hidden':'true'},'✓'),el('h2',{},'Thank you.'),el('p',{},spec.confirmation),done);host.replaceChildren(success);success.focus();}
   catch(error){status.textContent=error.message;submit.disabled=false;submit.textContent=spec.button;}
  });
 }
