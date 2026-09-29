@@ -6,6 +6,8 @@ const fixtures={
  area:{name:'[TEST] PodWash location launch QA',email:'podwash-qa@example.com',phone:'+1 876 555 0100',country:'Jamaica',region:'Kingston',city:'Kingston',role:'Community Member',reason:'Synthetic QA inquiry. No action needed.',partner:'Yes',partnerDetails:'Synthetic partner for launch QA.'},
  contact:{name:'[TEST] PodWash contact launch QA',email:'podwash-qa@example.com',phone:'+1 876 555 0100',interest:'General Information',message:'Synthetic launch test of PodWash forms, storage and notification. No action needed.'}
 };
+assert.deepEqual(Object.keys(forms),['corporate','podpro','area','contact']);
+assert.deepEqual(Object.keys(fixtures),Object.keys(forms));
 for(const [type,data] of Object.entries(fixtures)){assert.ok(validate(type,data).data,type);assert.ok(validate(type,{...data,email:'invalid'}).error);assert.ok(validate(type,{...data,name:''}).error);}
 assert.ok(validate('podpro',{...fixtures.podpro,guardianContact:''}).error);
 const adult=validate('podpro',{...fixtures.podpro,age:'18',experience:'No'}).data;
