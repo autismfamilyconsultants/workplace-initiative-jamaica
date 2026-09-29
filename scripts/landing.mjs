@@ -44,7 +44,6 @@ export const home=`<main id="main">
 <section id="home" class="hero"><div class="shell">
  <div class="hero-bento">
   <div class="hero-copy">
-   <p class="eyebrow">PodWash Jamaica</p>
    <p class="micro-label">An AFC Workforce Initiative | Powered by EcoWash Global</p>
    <h1>Clean Vehicles.<br>Real Jobs.<br><em>Lasting Skills.</em></h1>
    <p>PodWash Jamaica provides environmentally conscious exterior and interior vehicle cleaning services to businesses and organizations while creating paid employment and workforce development opportunities for youth and young adults ages 16–25.</p>
