@@ -137,3 +137,84 @@ html{scroll-padding-top:110px}
 @media(max-width:1150px){.corporate-intro,.service-layout{column-gap:64px}.corporate-heading-visual{padding:26px 28px}}
 @media(max-width:900px){.corporate-intro,.service-layout{column-gap:42px}.corporate-heading-visual{padding:24px}}
 @media(max-width:650px){.corporate-intro{grid-template-columns:1fr;gap:22px}.corporate-heading-visual{padding:22px}.service-layout{grid-template-columns:1fr;gap:28px}}
+
+/* Corporate service feature redesign */
+.corporate .service-layout{
+  grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+  gap:0;
+  align-items:stretch;
+  overflow:hidden;
+  border:1px solid rgba(16,59,33,.18);
+  border-radius:6px;
+  background:var(--deep);
+  box-shadow:0 18px 40px rgba(16,59,33,.08);
+}
+.corporate .service-copy{
+  padding:44px 46px 42px;
+  background:var(--deep);
+}
+.corporate .service-copy h3{
+  max-width:430px;
+  margin-bottom:20px;
+  color:#fff;
+  font-size:29px;
+}
+.corporate .service-copy p{
+  max-width:540px;
+  color:#d9e7dc;
+  font-size:14px;
+}
+.corporate .service-copy .button{
+  margin-top:18px;
+  background:var(--yellow);
+  color:var(--ink);
+}
+.corporate .service-copy .button:hover{
+  background:#f4b815;
+}
+.corporate .service-layout .sector-panel{
+  width:100%;
+  padding:40px 42px;
+  border-radius:0;
+  background:var(--yellow);
+  display:flex;
+  align-items:center;
+}
+.corporate .service-layout .sector-list{
+  width:100%;
+  grid-template-columns:1fr;
+  gap:0;
+}
+.corporate .service-layout .sector-list li{
+  align-items:center;
+  gap:14px;
+  padding:14px 0;
+  border-bottom:1px solid rgba(2,2,2,.14);
+  color:var(--ink);
+  font-size:14px;
+  line-height:1.45;
+}
+.corporate .service-layout .sector-list li:last-child{
+  border-bottom:0;
+}
+.corporate .service-layout .sector-list .bi{
+  width:28px;
+  height:28px;
+  border:1px solid rgba(16,59,33,.28);
+  border-radius:50%;
+  background:rgba(255,255,255,.3);
+  color:var(--deep);
+  display:grid;
+  place-items:center;
+  font-size:14px;
+}
+@media(max-width:900px){
+  .corporate .service-copy{padding:34px 32px}
+  .corporate .service-layout .sector-panel{padding:32px 30px}
+  .corporate .service-copy h3{font-size:25px}
+}
+@media(max-width:650px){
+  .corporate .service-layout{grid-template-columns:1fr}
+  .corporate .service-copy{padding:30px 24px}
+  .corporate .service-layout .sector-panel{padding:26px 24px;border-top:1px solid rgba(2,2,2,.12)}
+}
