@@ -144,24 +144,24 @@ html{scroll-padding-top:110px}
   gap:0;
   align-items:stretch;
   overflow:hidden;
-  border:1px solid rgba(16,59,33,.18);
+  border:1px solid rgba(16,59,33,.16);
   border-radius:6px;
-  background:var(--deep);
-  box-shadow:0 18px 40px rgba(16,59,33,.08);
+  background:#fff;
+  box-shadow:0 14px 34px rgba(16,59,33,.055);
 }
 .corporate .service-copy{
   padding:44px 46px 42px;
-  background:var(--deep);
+  background:var(--sage);
 }
 .corporate .service-copy h3{
   max-width:430px;
   margin-bottom:20px;
-  color:#fff;
+  color:var(--deep);
   font-size:29px;
 }
 .corporate .service-copy p{
   max-width:540px;
-  color:#d9e7dc;
+  color:var(--muted);
   font-size:14px;
 }
 .corporate .service-copy .button{
@@ -176,7 +176,8 @@ html{scroll-padding-top:110px}
   width:100%;
   padding:40px 42px;
   border-radius:0;
-  background:var(--yellow);
+  border-left:1px solid var(--line);
+  background:#fff;
   display:flex;
   align-items:center;
 }
@@ -189,7 +190,7 @@ html{scroll-padding-top:110px}
   align-items:center;
   gap:14px;
   padding:14px 0;
-  border-bottom:1px solid rgba(2,2,2,.14);
+  border-bottom:1px solid var(--line);
   color:var(--ink);
   font-size:14px;
   line-height:1.45;
@@ -200,10 +201,10 @@ html{scroll-padding-top:110px}
 .corporate .service-layout .sector-list .bi{
   width:28px;
   height:28px;
-  border:1px solid rgba(16,59,33,.28);
+  border:1px solid rgba(16,113,40,.22);
   border-radius:50%;
-  background:rgba(255,255,255,.3);
-  color:var(--deep);
+  background:#eef4ee;
+  color:var(--green);
   display:grid;
   place-items:center;
   font-size:14px;
@@ -216,5 +217,5 @@ html{scroll-padding-top:110px}
 @media(max-width:650px){
   .corporate .service-layout{grid-template-columns:1fr}
   .corporate .service-copy{padding:30px 24px}
-  .corporate .service-layout .sector-panel{padding:26px 24px;border-top:1px solid rgba(2,2,2,.12)}
+  .corporate .service-layout .sector-panel{padding:26px 24px;border-left:0;border-top:1px solid var(--line)}
 }
