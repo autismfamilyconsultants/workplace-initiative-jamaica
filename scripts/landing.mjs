@@ -66,10 +66,9 @@ export const home=`<main id="main">
 
 <section id="corporate" class="section corporate"><div class="shell">
  <div class="corporate-intro">
-  <div class="section-heading">
+  <div class="section-heading corporate-heading-visual">
    <p class="eyebrow">Corporate Partnerships</p>
    <h2>Bring PodWash to<br><em>Your Organization</em></h2>
-   <figure class="photo corporate-partnerships-photo"><img src="/corporate-partnerships.webp" alt="PodWash team members and a supervisor working beside a vehicle at a partner location" width="1536" height="1024" loading="lazy"></figure>
   </div>
   <div class="corporate-intro-copy">
    <p class="lede">PodWash Jamaica partners with businesses and organizations to provide convenient, environmentally conscious vehicle cleaning services at their locations.</p>
