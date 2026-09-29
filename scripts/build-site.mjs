@@ -3,7 +3,7 @@ import {home,icon} from './landing.mjs';
 import {forms} from '../supabase/functions/podwash-forms/schema.mjs';
 const site='https://www.podwashjamaica.com';
 const out='dist';fs.mkdirSync(out,{recursive:true});
-for(const file of ['favicon.png','podwash-jamaica-logo.png','podwash-logo.svg','podwash-header-logo.svg','vehicle-care.webp','team-work.webp','podpro-training.webp','site.css','brand.css','site.js'])fs.copyFileSync(`static/${file}`,`${out}/${file}`);
+for(const file of ['favicon.png','podwash-jamaica-logo.png','podwash-logo.svg','podwash-header-logo.svg','vehicle-care.webp','corporate-partnerships.webp','team-work.webp','podpro-training.webp','site.css','brand.css','site.js'])fs.copyFileSync(`static/${file}`,`${out}/${file}`);
 fs.cpSync('node_modules/bootstrap-icons/font',`${out}/icons`,{recursive:true});
 fs.copyFileSync('supabase/functions/podwash-forms/schema.mjs',`${out}/schema.mjs`);
 const config={url:process.env.NEXT_PUBLIC_SUPABASE_URL||'https://aabqjokzpjadmpdoyhfe.supabase.co',anonKey:process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY||''};

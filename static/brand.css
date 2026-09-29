@@ -125,3 +125,12 @@ html{scroll-padding-top:110px}
  .about-grid>div:first-child{min-height:410px;padding:24px;background-position:center 60%}
  .about-grid>div:first-child h2{max-width:100%}
 }
+
+/* Corporate Partnerships spacing and visual */
+.corporate-intro{column-gap:96px}
+.corporate-partnerships-photo{width:100%;aspect-ratio:4/3;height:auto;margin-top:28px;border:1px solid var(--line);border-radius:6px;box-shadow:0 10px 24px rgba(16,59,33,.08)}
+.corporate-partnerships-photo img{object-position:50% 48%}
+.service-layout{column-gap:96px}
+@media(max-width:1150px){.corporate-intro,.service-layout{column-gap:64px}.corporate-partnerships-photo{margin-top:24px}}
+@media(max-width:900px){.corporate-intro,.service-layout{column-gap:42px}}
+@media(max-width:650px){.corporate-intro{grid-template-columns:1fr;gap:22px}.corporate-partnerships-photo{margin-top:22px}.service-layout{grid-template-columns:1fr;gap:28px}}
