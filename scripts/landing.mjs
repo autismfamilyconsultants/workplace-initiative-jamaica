@@ -65,14 +65,18 @@ export const home=`<main id="main">
 </div></section>
 
 <section id="corporate" class="section corporate"><div class="shell">
+ <div class="corporate-intro">
+  <div class="section-heading">
+   <p class="eyebrow">Corporate Partnerships</p>
+   <h2>Bring PodWash to<br><em>Your Organization</em></h2>
+  </div>
+  <div class="corporate-intro-copy">
+   <p class="lede">PodWash Jamaica partners with businesses and organizations to provide convenient, environmentally conscious vehicle cleaning services at their locations.</p>
+   <p>Rather than routinely sending vehicles off site for cleaning, your organization can work with PodWash to develop a vehicle cleaning arrangement designed around your operation.</p>
+  </div>
+ </div>
  <div class="service-layout">
   <div class="service-copy">
-   <div class="section-heading">
-    <p class="eyebrow">Corporate Partnerships</p>
-    <h2>Bring PodWash to<br><em>Your Organization</em></h2>
-    <p class="lede">PodWash Jamaica partners with businesses and organizations to provide convenient, environmentally conscious vehicle cleaning services at their locations.</p>
-    <p>Rather than routinely sending vehicles off site for cleaning, your organization can work with PodWash to develop a vehicle cleaning arrangement designed around your operation.</p>
-   </div>
    <h3>Vehicle Cleaning Designed Around Your Operation</h3>
    <p>PodWash Jamaica provides both exterior and interior vehicle cleaning services at partner locations.</p>
    <p>Because every organization operates differently, the exact service package is developed around each corporate partner's vehicle volume, location, scheduling requirements, service frequency, and cleaning needs.</p>
