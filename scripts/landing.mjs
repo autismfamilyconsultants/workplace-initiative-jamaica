@@ -154,7 +154,7 @@ export const home=`<main id="main">
 
 <section id="about" class="section about"><div class="shell">
  <div class="about-grid">
-  <div><p class="eyebrow">About PodWash Jamaica</p><h2>Where Workforce Development Meets <em>Real Employment</em></h2><p class="signature">AFC <span>&amp;</span> PodWash Jamaica</p></div>
+  <div><p class="eyebrow">About PodWash Jamaica</p><h2>Where Workforce Development Meets <em>Real Employment</em></h2></div>
   <div>
    <p class="lede">PodWash Jamaica is an AFC Workforce Initiative that connects workforce development with actual paid employment.</p>
    <p>Autism Family Consultants brings extensive experience supporting autistic individuals and their families, including experience in education, transition planning, workforce preparation, and preparation for adult life.</p>
