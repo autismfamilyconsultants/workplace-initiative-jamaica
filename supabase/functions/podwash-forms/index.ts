@@ -1,6 +1,6 @@
 import {forms,validate} from './schema.mjs';
 const url=Deno.env.get('SUPABASE_URL')!,service=Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
-const notificationTo=Deno.env.get('AFC_EMAIL_TO')?.trim()||'autismfamilyconsultantslimited@gmail.com';
+const notificationTo=Deno.env.get('AFC_CONTACT_RECIPIENT')?.trim()||Deno.env.get('AFC_EMAIL_TO')?.trim()||'autismfamilyconsultantslimited@gmail.com';
 const origins=new Set(['https://podwashjamaica.com','https://www.podwashjamaica.com','https://workplace-initiative-jamaica.vercel.app','http://localhost:4190','http://127.0.0.1:4190']);
 class Failure extends Error{constructor(public status:number,message:string){super(message);}}
 const hash=async(s:string)=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))).map(b=>b.toString(16).padStart(2,'0')).join('');

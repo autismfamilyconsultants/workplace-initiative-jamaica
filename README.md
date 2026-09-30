@@ -20,7 +20,7 @@ Run `npm run build`, then `node scripts/serve.mjs` for http://127.0.0.1:4190.
 
 Run `node scripts/test-forms.mjs` for validation checks. The optional `--live` flag creates clearly marked synthetic submissions and sends real test notifications to the founder; use only for intentional deployment checks.
 
-Configure public `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` in Vercel. Supabase uses its own server role, existing `RESEND_API_KEY`, `AFC_EMAIL_FROM`, optional `AFC_EMAIL_TO` (defaults to `autismfamilyconsultantslimited@gmail.com`), and existing founder-key hash (`ADMIN_REVIEW_TOKEN_HASH` if configured). No email key or server-role key belongs in browser configuration.
+Configure public `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` in Vercel. Supabase uses its own server role, existing `RESEND_API_KEY`, `AFC_EMAIL_FROM`, and the same `AFC_CONTACT_RECIPIENT` used by the AFC contact form (with `AFC_EMAIL_TO` as an optional PodWash override and `autismfamilyconsultantslimited@gmail.com` as the final fallback), plus the existing founder-key hash (`ADMIN_REVIEW_TOKEN_HASH` if configured). No email key or server-role key belongs in browser configuration.
 
 The schema is recorded in `supabase/migrations/20260926190634_podwash_submissions.sql`. It was applied directly to the existing shared database; do not push an incomplete migration history over the AFC project. Deploy only `podwash-forms` with JWT verification enabled.
 
