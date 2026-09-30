@@ -290,3 +290,12 @@ html{scroll-padding-top:110px}
   .about-details .external-cta,
   .ecowash .external-cta{width:100%;max-width:none}
 }
+
+/* Contact form typography */
+.contact-grid .form-card .field label,
+.contact-grid .form-card legend{
+  font-weight:400;
+}
+.contact-grid .form-card .optional{
+  font-weight:400;
+}
