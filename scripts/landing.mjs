@@ -196,9 +196,9 @@ export const home=`<main id="main">
   <p class="eyebrow">Clean Vehicles. Create Opportunities.</p>
   <h2>PodWash Jamaica brings together environmentally conscious vehicle cleaning, real employment, and workforce development.</h2>
   <div class="closing-grid">
-   <article><span class="closing-icon"><i class="bi bi-briefcase" aria-hidden="true"></i></span><h3>For Organizations</h3><p>Bring PodWash to your location and let's develop a vehicle cleaning solution that works for your operation.</p><a class="button closing-cta" href="#corporate">EXPLORE CORPORATE PARTNERSHIPS</a></article>
-   <article><span class="closing-icon"><i class="bi bi-person-badge" aria-hidden="true"></i></span><h3>For Future PodPros</h3><p>Build skills. Gain experience. Get paid.</p><a class="button closing-cta" href="/forms/podpro">BECOME A PODPRO</a></article>
-   <article><span class="closing-icon"><i class="bi bi-geo-alt" aria-hidden="true"></i></span><h3>Want PodWash in Your Area?</h3><p>Tell us where you would like to see PodWash next.</p><a class="button closing-cta" href="/forms/area">BRING PODWASH TO MY AREA</a></article>
+   <article><h3>For Organizations</h3><p>Bring PodWash to your location and let's develop a vehicle cleaning solution that works for your operation.</p><a class="button" href="#corporate">EXPLORE CORPORATE PARTNERSHIPS</a></article>
+   <article><h3>For Future PodPros</h3><p>Build skills. Gain experience. Get paid.</p><a class="button" href="/forms/podpro">BECOME A PODPRO</a></article>
+   <article><h3>Want PodWash in Your Area?</h3><p>Tell us where you would like to see PodWash next.</p><a class="button" href="/forms/area">BRING PODWASH TO MY AREA</a></article>
   </div>
  </div>
 </div></section>
